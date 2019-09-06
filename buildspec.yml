@@ -7,8 +7,16 @@ phases:
   install:
     runtime-versions:
       nodejs: 8
-  build:
+  pre_build:
     commands:
       - npm install -g serverless
       - sls config credentials --provider aws --key $AWS_KEY --secret $AWS_SECERET_KEY
-      - serverless deploy
+  build:
+    commands:
+      - mkdir -p target/prod
+      - serverless package --package target/prod
+artifacts:
+  files:
+  - target/**/*
+  - serverless.yml
+  - deploy.sh
