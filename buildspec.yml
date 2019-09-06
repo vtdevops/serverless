@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 env:
   parameter-store:
     AWS_SECERET_KEY: /CodeBuild/AWS_SECERET_KEY
