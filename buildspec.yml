@@ -5,7 +5,7 @@ env:
     AWS_KEY: /CodeBuild/AWS_KEY
 phases:
   install:
-  runtime-versions:
+    runtime-versions:
       nodejs: 8
   commands:
       - npm install -g serverless
