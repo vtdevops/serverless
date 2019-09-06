@@ -1,0 +1,14 @@
+version: 0.1
+env:
+  parameter-store:
+    AWS_SECERET_KEY: /CodeBuild/AWS_SECERET_KEY
+    AWS_KEY: /CodeBuild/AWS_KEY
+phases:
+  install:
+    commands:
+      - npm install
+      - npm install -g serverless
+  build:
+    commands:
+      - sls config credentials --provider aws --key $AWS_KEY --secret $AWS_SECERET_KEY
+      - serverless deploy
