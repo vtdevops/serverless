@@ -1,8 +1,8 @@
 version: 0.2
 env:
   parameter-store:
-    AWS_SECERET_KEY: /CodeBuild/AWS_SECERET_KEY
-    AWS_KEY: /CodeBuild/AWS_KEY
+    AWS_SECERET_KEY: /AWS_SECERET_KEY
+    AWS_KEY: /AWS_KEY
 phases:
   install:
     runtime-versions:
