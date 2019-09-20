@@ -4,7 +4,7 @@ module.exports.hello = async (event) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'Go Serverless v1.0! This Function is deployed by AWS CodePipeline with manual approval via Email',
+      message: 'Go Serverless v1.0! This Function is deployed by AWS CodePipeline with manual approval via Email by Tapan and Varun',
       input: event,
     }, null, 2),
   };
